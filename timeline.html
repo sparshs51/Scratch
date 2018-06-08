@@ -1,0 +1,418 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Timeline</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css" type="text/css">
+    <script src="lib/jquery-3.2.0.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="lib/bootstrap-switch/css/bootstrap-switch.min.css">
+    <script src="lib/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+    <script src="https://twemoji.maxcdn.com/twemoji.min.js"></script>
+    <script src="js/lazy-load.min.js"></script> 
+    <script src="js/another.min.js"></script>
+    <script src="js/socialyte.min.js"></script>
+    <link rel="stylesheet" href="wallstyle.css" type="text/css">
+</head>
+
+<body id="wall">
+
+    <!--Header with Nav -->
+    <header class="text-right" id="bru">
+        <form class="text-left search" method="GET">
+<i class="material-icons ic searchicon">
+search
+</i>
+            <input name="q" type="text" placeholder=" Search for your posts or your notes" >
+        </form>
+        <div class="menu-icon">
+            <div class="second-icon">
+                <i class="material-icons ic noti">notifications</i>
+            </div>
+            <div class="second-icon">
+                <i class="material-icons ic message">message</i>
+            </div>
+            <div class="second-icon">
+                <span><a href="timeline.html" title="Wall"><span class="headname">Sparsh Singh<img src="img/user.jpg" alt="User image" class="userimg"></span> </a>
+                </span>
+            </div>
+            <div>
+                <div class="showleft">
+                                    <button class="button1 showleft" onclick="w3_open1()"><i class="material-icons">sms</i></button>
+                    
+                </div>
+            </div>
+            <div>
+                <button class="button1 showleft" onclick="w3_open()">☰</button>
+
+            </div>
+            
+        </div>
+    </header>
+
+
+    <!--Left Sidebar  -->
+    <div class="sidebar-nav over" id="mySidebar">
+        <div class=" butt text-center" >
+
+            <span >
+                <i class="material-icons ic">note_add</i>
+                New Note
+            </span>
+        </div>
+        <div class=" butt text-center">
+            
+                <i class="material-icons ic">
+                    add_box
+                </i>
+            <span >    
+                New Post
+            </span>
+        </div>
+        <div class="features">
+               <button class="collapsible">
+                   <i class="material-icons ic">chrome_reader_mode</i> &nbsp &nbsp Feed
+               </button> 
+            <div class="content">
+                
+
+            </div>
+                
+               <button class="collapsible">
+                   <i class="material-icons ic">laptop_mac</i> &nbsp &nbsp Classes
+               </button> 
+                <div class="content">
+                       <button class="content-data border" style="border-color: #ffffff70">
+                    Spanish Grammar<span class="text-right xsmall sub">2</span>
+                </button>
+                <button class="content-data border" style="border-color: #ffffff70">
+                    Electronics 101<span class="text-right online" style="background-color: pink;"></span>
+                    <div class="xsmall light" style="color: #ffffff70">1 Assignment due today</div>
+                </button>
+                <button class="content-data border" style="border-color: #ffffff70">
+                    Quantum Physics<span class="text-right online" style="background-color: orange;"></span>
+                    <div class="xsmall light" style="color: #ffffff70"> Low Strength</div>
+                </button>
+                <button class="content-data border" style="border-color: #ffffff70">
+                    Mathematics II<span class="text-right xsmall sub">2</span>
+                    <div class="xsmall light" style="color: #ffffff70"></div>
+                </button>       
+                <button class="content-data border" style="border-color: #ffffff70">
+                    Nanomaterials Project
+                    <div class="xsmall light" style="color: #ffffff70"></div>
+                </button> 
+                <button class="content-data" style="color: #1B8FFF90;">
+                    &#x25BF See more
+                    <div class="xsmall light" style="color: #ffffff70"></div>
+                </button>    
+                </div>
+              
+
+               <button class="collapsible">
+                   <i class="material-icons ic">book</i> &nbsp &nbsp Notebook
+               </button> 
+                <div class="content">
+                    
+                    <button class="content-data border" style="border-color: #ffffff70">
+                    Operating Systems by Galvin<span class="text-right online" style="background-color: orange;"></span>
+                    <div class="xsmall light" style="color: #ffffff70"> 20% read</div>
+                </button>
+                <button class="content-data border" style="border-color: #ffffff70">
+                    Microprocessors by Gauche<span class="text-right online" style="background-color: pink;"></span>
+                    <div class="xsmall light" style="color: #ffffff70"> 80% read</div>
+                </button>
+                <button class="content-data border" style="border-color: #ffffff70">
+                    Mechanics by H. K. Pallival<span class="text-right online"></span>
+                    <div class="xsmall light" style="color: #ffffff70"> Yet to start!</div>
+                </button>
+                </div>
+              
+
+               <button class="collapsible">
+                   <i class="material-icons ic">calendar_today</i> &nbsp &nbsp Calendar
+               </button> 
+                <div class="content">
+                
+                </div>
+              
+
+                <button class="collapsible">
+                   <i class="material-icons ic">group</i> &nbsp &nbsp Groups
+               </button> 
+                <div class="content">
+                    
+                </div> 
+            </div>
+            <div class="features topics">
+                <div class="top">MM News Team</div>
+                <div class="top">SELS family</div>
+            </div>
+        </div>
+        
+    </div>
+    <!--Right Sidebar  -->
+    <div class="sidebar-nav-rt over" id="mySidebar1" >
+        <div class="schedule large">
+            <div class="box border">
+                <span>Schedule</span>
+                <span class="task">Add a task</span>
+            </div>
+            <div class="">
+                    
+                        <div class="elements scheduleitems over">
+                            <p class="element border medium">
+                            <span class="light pad medium today"><b>TODAY</b></span><br>
+                            <i class="material-icons ic checkbox" >check_box_outline_blank</i>
+                            <span class="light small">10:00 AM - 10:45 AM</span><br>
+                            <span>Spanish Grammar</span><br>
+                            <span class="small medlight pad25" ><b>Lecture</b></span>
+                            </p>
+
+                            <p class="border element medium">
+                            <i class="material-icons ic checkbox" >check_box_outline_blank</i>
+                            <span class="light small">2:00 PM</span><br>
+                            <span>Meet Jacob</span><br>
+                            <span class="small medlight pad25"><b>Task</b></span>
+                            </p>
+
+
+                            <p class="border medium element">
+                            <i class="material-icons ic checkbox" >check_box_outline_blank</i>
+                            <span class="light small">2:30 PM -5:00 PM</span><br>
+                            <span>Physics lab</span><br>
+                            <span class="small medlight pad25"><b>Lab</b></span>
+                            </p>
+
+
+                            <p class="border medium element">
+                            <i class="material-icons ic checkbox" >check_box_outline_blank</i>
+                            <span class="light small">6:00 PM</span><br>
+                            <span>Buy Stationary</span><br>
+                            <span class="small medlight pad25"><b>Task</b></span>
+                            </p>
+                            
+                            <div class="border pad">
+                                <span class="light small" id="cursor"> Show completed (2)</span>
+                            </div>
+
+
+
+
+<p class="element border medium">
+                            <span class="light pad medium today"><b>TODAY</b></span><br>
+                            <i class="material-icons ic checkbox" >check_box_outline_blank</i>
+                            <span class="light small">10:00 AM - 10:45 AM</span><br>
+                            <span>Spanish Grammar</span><br>
+                            <span class="small medlight pad25" ><b>Lecture</b></span>
+                            </p>
+
+                            <p class="border element medium">
+                            <i class="material-icons ic checkbox" >check_box_outline_blank</i>
+                            <span class="light small">2:00 PM</span><br>
+                            <span>Meet Jacob</span><br>
+                            <span class="small medlight pad25"><b>Task</b></span>
+                            </p>
+
+
+                            <p class="border medium element">
+                            <i class="material-icons ic checkbox" >check_box_outline_blank</i>
+                            <span class="light small">2:30 PM -5:00 PM</span><br>
+                            <span>Physics lab</span><br>
+                            <span class="small medlight pad25"><b>Lab</b></span>
+                            </p>
+
+
+                            <p class="border medium element">
+                            <i class="material-icons ic checkbox" >check_box_outline_blank</i>
+                            <span class="light small">6:00 PM</span><br>
+                            <span>Buy Stationary</span><br>
+                            <span class="small medlight pad25"><b>Task</b></span>
+                            </p>
+                            
+                            <div class="border pad">
+                                <span class="light small" id="cursor"> Show completed (2)</span>
+                            </div>
+
+
+
+
+
+                            
+                        </div>
+                        
+            </div>
+                    <div class="tomorrow">
+                        
+
+                    </div>
+            </div>
+            
+        
+        <div class="classmates box">
+            <div style="width: 50% ; float: left;">
+                Classmates
+            </div>
+            <div class="text-right">
+                <form class="search2" method="GET">
+                    <input name="q" type="text" placeholder="Search..">
+                </form>
+            </div>
+            
+        </div>
+        <div class="chatbox over medium">
+            
+<p class="chatname"><img src="img/messi.jpg" class="userimg">
+                    Sajal Jain<i class="text-right online"></i>
+                </p>
+
+                <p class="chatname"><img src="img/shubham.jpg" class="userimg">
+                    <span>Shubham</span><span class="text-right online"></span>
+                </p>
+                <p class="chatname"><img src="img/jessica.jpg" class="userimg">
+                    <span>Jessica</span><span class="text-right online"></span>
+                </p>
+                
+                <p class="chatname"><img src="img/download.png" class="userimg">
+                    <span >Jones</span>
+                </p>
+                <p class="chatname"><img src="img/sanjana.jpg" class="userimg">
+                    <span >Sanjana</span>
+                </p>
+                <p class="chatname"><img src="img/ayush.jpg" class="userimg">
+                    <span >Ayush Sharma</span>
+                </p>
+                       
+                
+
+        </div>
+    </div>
+
+    <!--Wall with Post -->
+    <div class="content-posts" id="posts">
+        <div id="posts-container" class="container-fluid container-posts">
+
+            <div class="post1">
+                <div class="row">
+                    <div class="live">
+                        <div class="livebox text-center small light">Live</div>
+                    </div>
+                </div>
+                <div class="post">
+                    <div class="data-post databox">
+                        
+                    </div>
+                    <div class="databox data-post">
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-post">
+                <div class="row">
+                    <div class="col-xs-3 col-sm-2">
+                        <span class="tag text-center">
+                            Lecture
+                        </span>
+                        <i class="material-icons ic" style="float: right;"> more_vert</i>
+                        <span class="med12">&nbsp in 3 hrs 50 mins</span>
+                        <span class="greyheart">&#x2764;</span><span class="redheart">&#x2764;&#x2764;&#x2764;&#x2764;</span>
+                                
+                    </div>
+                    <div class="postbox small">
+                        <span class="assign">1 Assignment due today</span>
+                        <span class="text-right" style="color: #1bc8ac;">View Now</span>
+                    </div>
+
+                    <span class="classbox">
+                        <span class="box1 text-left">
+                            <span class="xlarge">Electronics 101</span><br>
+                            <span class="small light">Faculty: Kunal Ray &nbsp &nbsp</span>
+                            <span class="left-border small light">&nbsp Course Code: EE101</span><br>
+                            <div>
+                                <img src="img/user.jpg" class="userimg2"><img src="img/download.png" class="userimg2"> <img src="img/sparsh.jpg" class="userimg2"><img src="img/eminem.png" class="userimg2"><img src="img/messi.jpg" class="userimg2">
+                                <span class="light xsmall"> +24 more students</span>
+                            </div>
+                            
+                        </span>
+                        <div class="left-border text-right nexbox">
+                            <div class="light small">NEXT CLASS</div>
+                            <div class="small">TODAY</div>
+                            <div class="small light margin-top">VENUE</div>
+                            <div class="small">EE-245</div>
+                        </div>
+                    </span>
+                </div>
+                <div class="row">
+                    <div class="graphs">
+                        <div class="graphbox">
+                            <div class="graphtext small medlight">  ATTENDANCE</div>
+                            <div class="large" style="margin-left: 30px;">82</div>
+
+                        </div>
+                        <div class="graphbox">
+                            <div class="graphtext small medlight">  PERFORMANCE</div>
+                            <div class="large" style="margin-left: 30px;">76</div>
+
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+
+            
+        <!--Close #posts-container-->
+        <div id="loading">
+            <img src="img/load.gif" alt="loader">
+        </div>
+    </div>
+    <!-- Close #posts -->
+    <!-- Modal container for settings-->
+    <div id="settingsmodal" class="modal fade text-center">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+
+
+function myFunction() {
+    var x = document.getElementById("myDIV");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("mySidebar1").style.display = "none";
+}
+function w3_open1() {
+    document.getElementById("mySidebar1").style.display = "block";
+    document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</html>
